@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c5o7xuwx7yh8m"]
+
+[ext_resource type="Script" uid="uid://cx2ytph70dnrg" path="res://addons/reusable-ui-components/scale_wrapper/scale_wrapper.gd" id="1_t7hst"]
+
+[node name="ScaleWrapper" type="Control" unique_id=778595757]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t7hst")

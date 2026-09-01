@@ -3,13 +3,35 @@
 [ext_resource type="Script" uid="uid://c4eqaankpfqb1" path="res://addons/reusable-ui-components/node_2d_wrapper/node_2d_wrapper.gd" id="1_ilbs7"]
 [ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="2_yyu40"]
 
-[node name="Node2dWrapperDemo" type="CenterContainer" unique_id=1037551366 node_paths=PackedStringArray("_target_node")]
+[node name="Node2dWrapperDemo" type="Control" unique_id=1269344325]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node2dWrapper" type="CenterContainer" parent="." unique_id=1037551366 node_paths=PackedStringArray("_target_node")]
 custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
 offset_right = 128.0
 offset_bottom = 128.0
 script = ExtResource("1_ilbs7")
 _target_node = NodePath("Sprite2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=506948840]
+[node name="Sprite2D" type="Sprite2D" parent="Node2dWrapper" unique_id=506948840]
 position = Vector2(64, 64)
 texture = ExtResource("2_yyu40")
+
+[node name="Label" type="Label" parent="." unique_id=1934045478]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 19.0
+offset_right = 236.0
+offset_bottom = 42.0
+text = "Notice how the Sprite2D is wrapped inside a Control node.
+If you select the Node2DWrapper node, you can see how its
+size matches the Sprite2D's.
+
+Now you can place it inside any Container and have it work
+properly."
