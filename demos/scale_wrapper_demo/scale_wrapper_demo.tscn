@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw3jmyqhplyla"]
 
-[ext_resource type="PackedScene" uid="uid://c5o7xuwx7yh8m" path="res://addons/reusable-ui-components/scale_wrapper/scale_wrapper.tscn" id="1_4nuj1"]
+[ext_resource type="PackedScene" uid="uid://c5o7xuwx7yh8m" path="res://addons/reusable-ui-components/components/scale_wrapper/scale_wrapper.tscn" id="1_4nuj1"]
 
 [node name="ScaleWrapperDemo" type="Control" unique_id=1529090751]
 layout_mode = 3
@@ -25,7 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScaleWrapper0" parent="VBoxContainer" unique_id=778595757 instance=ExtResource("1_4nuj1")]
-custom_minimum_size = Vector2(124, 62)
 layout_mode = 2
 size_flags_horizontal = 4
 
@@ -37,7 +36,6 @@ scale = Vector2(2, 2)
 text = "Button"
 
 [node name="ScaleWrapper1" parent="VBoxContainer" unique_id=129482313 instance=ExtResource("1_4nuj1")]
-custom_minimum_size = Vector2(600, 81)
 layout_mode = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/ScaleWrapper1" unique_id=1547552919]
@@ -48,7 +46,6 @@ offset_bottom = 27.0
 scale = Vector2(3, 3)
 
 [node name="ScaleWrapper2" parent="VBoxContainer" unique_id=1355398802 instance=ExtResource("1_4nuj1")]
-custom_minimum_size = Vector2(388, 62)
 layout_mode = 2
 size_flags_horizontal = 4
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://hp173stsd2lh"]
 
-[ext_resource type="Script" uid="uid://i6jn3yhix04o" path="res://addons/reusable-ui-components/slot_wheel/slot_wheel.gd" id="1_jnn14"]
+[ext_resource type="Script" uid="uid://i6jn3yhix04o" path="res://addons/reusable-ui-components/components/slot_wheel/slot_wheel.gd" id="1_jnn14"]
 [ext_resource type="Script" uid="uid://k36h7yx0jqww" path="res://demos/slot_wheel_demo/slot_wheel_demo.gd" id="1_n87h3"]
 [ext_resource type="Texture2D" uid="uid://db0oa6hs4qokd" path="res://demos/slot_wheel_demo/assets/spritesheet_coins.png" id="2_jnn14"]
 
@@ -35,7 +35,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n87h3")
 wheels = [NodePath("SlotMachine/TextureSlotWheel"), NodePath("SlotMachine/TextSlotWheel")]
-preview_spin_progress = 0.99
 
 [node name="SlotMachine" type="HBoxContainer" parent="." unique_id=90060025]
 layout_mode = 1
@@ -109,8 +108,7 @@ spin_curve = SubResource("Curve_n87h3")
 
 [node name="BoxContainer" type="BoxContainer" parent="SlotMachine/TextSlotWheel" unique_id=1186060183]
 layout_mode = 0
-offset_top = -136.0
 offset_right = 128.0
-offset_bottom = 1112.0
+offset_bottom = 1248.0
 theme_override_constants/separation = 8
 vertical = true

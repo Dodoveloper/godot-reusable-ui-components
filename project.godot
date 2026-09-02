@@ -23,6 +23,7 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://demos/": "teal",
+"res://demos/inventory_demo/assets/": "pink",
 "res://demos/slot_wheel_demo/assets/": "pink"
 }
 

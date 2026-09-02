@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7d1hfkyhb2jm"]
 
-[ext_resource type="Script" uid="uid://c4eqaankpfqb1" path="res://addons/reusable-ui-components/node_2d_wrapper/node_2d_wrapper.gd" id="1_ilbs7"]
+[ext_resource type="Script" uid="uid://c4eqaankpfqb1" path="res://addons/reusable-ui-components/components/node_2d_wrapper/node_2d_wrapper.gd" id="1_ilbs7"]
 [ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="2_yyu40"]
 
 [node name="Node2dWrapperDemo" type="Control" unique_id=1269344325]
