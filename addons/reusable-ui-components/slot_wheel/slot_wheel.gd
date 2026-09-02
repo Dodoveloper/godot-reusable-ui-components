@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/reusable-ui-components/assets/icons/wheel.svg")
 class_name SlotWheel
 extends Control
 ## A slot-machine-style wheel that scrolls through a looping list of items and 

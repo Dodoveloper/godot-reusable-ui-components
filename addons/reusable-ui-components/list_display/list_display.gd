@@ -1,4 +1,5 @@
 @abstract
+@icon("res://addons/reusable-ui-components/assets/icons/list_unordered.svg")
 class_name ListDisplay
 extends Control
 ## Abstract UI element for displaying a dynamic list of [Control] nodes bound to arbitrary data.

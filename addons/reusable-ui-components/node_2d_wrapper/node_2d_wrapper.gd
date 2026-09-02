@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/reusable-ui-components/assets/icons/box_wireframe.svg")
 class_name Node2DWrapper
 extends Control
 ## UI object which can make [Node2D] nodes [Control] nodes, useful when using them inside [Container]s

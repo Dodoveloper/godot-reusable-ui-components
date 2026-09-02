@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/reusable-ui-components/assets/icons/arrow_double_diagonal.svg")
 class_name ScaleWrapper
 extends Control
 ## A wrapper that adapts its minimum size to a single child [Control].
