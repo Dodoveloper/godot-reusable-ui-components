@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://hp173stsd2lh"]
+
+[ext_resource type="Script" uid="uid://i6jn3yhix04o" path="res://addons/reusable-ui-components/slot_wheel/slot_wheel.gd" id="1_jnn14"]
+[ext_resource type="Script" uid="uid://k36h7yx0jqww" path="res://demos/slot_wheel_demo/slot_wheel_demo.gd" id="1_n87h3"]
+[ext_resource type="Texture2D" uid="uid://db0oa6hs4qokd" path="res://demos/slot_wheel_demo/assets/spritesheet_coins.png" id="2_jnn14"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnn14"]
+atlas = ExtResource("2_jnn14")
+region = Rect2(580, 300, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n87h3"]
+atlas = ExtResource("2_jnn14")
+region = Rect2(450, 430, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ubue"]
+atlas = ExtResource("2_jnn14")
+region = Rect2(450, 691, 128, 128)
+
+[sub_resource type="Curve" id="Curve_n87h3"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.31629393, 0.1583333), 1.3766205, 1.3766205, 0, 0, Vector2(0.7028754, 0.9), 2.7387507, 2.7387507, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_jnn14"]
+font_size = 64
+font_color = Color(1, 1, 0.20392157, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="SlotWheelDemo" type="Control" unique_id=1998515407 node_paths=PackedStringArray("wheels")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n87h3")
+wheels = [NodePath("SlotMachine/TextureSlotWheel"), NodePath("SlotMachine/TextSlotWheel")]
+preview_spin_progress = 0.99
+
+[node name="SlotMachine" type="HBoxContainer" parent="." unique_id=90060025]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureSlotWheel" type="Control" parent="SlotMachine" unique_id=1205420841 node_paths=PackedStringArray("content")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+clip_contents = true
+layout_mode = 2
+script = ExtResource("1_jnn14")
+content = NodePath("BoxContainer")
+item_size = Vector2(128, 128)
+separation = 8
+_editor_items = Array[Dictionary]([{
+"id": "ITEM_1",
+"type": "ICON"
+}, {
+"id": "ITEM_2",
+"type": "ICON"
+}, {
+"id": "ITEM_3",
+"type": "ICON"
+}])
+item_texture_style = Dictionary[String, Texture2D]({
+"ITEM_1": SubResource("AtlasTexture_jnn14"),
+"ITEM_2": SubResource("AtlasTexture_n87h3"),
+"ITEM_3": SubResource("AtlasTexture_4ubue")
+})
+spin_curve = SubResource("Curve_n87h3")
+
+[node name="BoxContainer" type="BoxContainer" parent="SlotMachine/TextureSlotWheel" unique_id=769757280]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 1952.0
+theme_override_constants/separation = 8
+vertical = true
+
+[node name="TextSlotWheel" type="Control" parent="SlotMachine" unique_id=2108862781 node_paths=PackedStringArray("content")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+clip_contents = true
+layout_mode = 2
+script = ExtResource("1_jnn14")
+content = NodePath("BoxContainer")
+item_size = Vector2(128, 128)
+separation = 8
+_editor_items = Array[Dictionary]([{
+"id": "1",
+"type": "TEXT"
+}, {
+"id": "2",
+"type": "TEXT"
+}, {
+"id": "5",
+"type": "TEXT"
+}])
+item_text_style = SubResource("LabelSettings_jnn14")
+spin_speed = 2.5
+spin_curve = SubResource("Curve_n87h3")
+
+[node name="BoxContainer" type="BoxContainer" parent="SlotMachine/TextSlotWheel" unique_id=1186060183]
+layout_mode = 0
+offset_top = -136.0
+offset_right = 128.0
+offset_bottom = 1112.0
+theme_override_constants/separation = 8
+vertical = true

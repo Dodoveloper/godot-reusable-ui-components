@@ -103,7 +103,7 @@ func _sync_layout() -> void:
 		if _target_node.has_method(&"get_size"):
 			min_size = _target_node.get_size()
 		else:
-			push_warning("Unsupported Node2D type", _target_node.to_string())
+			push_warning("Unsupported Node2D type ", _target_node.to_string())
 	
 	var target_size := min_size * _target_node.scale
 	_update_size(target_size)
