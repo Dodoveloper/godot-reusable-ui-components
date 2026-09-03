@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 
 
 const DUMMY_ITEM_COUNT := 100

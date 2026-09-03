@@ -5,7 +5,17 @@
 [ext_resource type="Texture2D" uid="uid://4bc30bd2ul65" path="res://demos/inventory_demo/assets/slot_tile.png" id="2_i8fni"]
 [ext_resource type="PackedScene" uid="uid://l0b5h2ihp2bn" path="res://demos/inventory_demo/item_list_display/item_list_display.tscn" id="4_cnost"]
 
-[node name="InventoryDemo" type="PanelContainer" unique_id=339178906]
+[node name="InventoryDemo" type="Control" unique_id=466065189]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_edc4j")
+
+[node name="Inventory" type="PanelContainer" parent="." unique_id=339178906]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -17,30 +27,29 @@ offset_right = 283.0
 offset_bottom = 164.25
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_edc4j")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1165020082]
+[node name="VBoxContainer" type="VBoxContainer" parent="Inventory" unique_id=1165020082]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=317828639]
+[node name="Label" type="Label" parent="Inventory/VBoxContainer" unique_id=317828639]
 layout_mode = 2
 text = "Fancy Dummy Inventory"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=721929002]
+[node name="HBoxContainer" type="HBoxContainer" parent="Inventory/VBoxContainer" unique_id=721929002]
 layout_mode = 2
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="Rarity" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1753202053]
+[node name="Rarity" type="HBoxContainer" parent="Inventory/VBoxContainer/HBoxContainer" unique_id=1753202053]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Rarity" unique_id=1094953150]
+[node name="Label" type="Label" parent="Inventory/VBoxContainer/HBoxContainer/Rarity" unique_id=1094953150]
 layout_mode = 2
 text = "Sort by Rarity:"
 
-[node name="SortByRarityButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/Rarity" unique_id=1888466025]
+[node name="SortByRarityButton" type="OptionButton" parent="Inventory/VBoxContainer/HBoxContainer/Rarity" unique_id=1888466025]
 unique_name_in_owner = true
 layout_mode = 2
 item_count = 2
@@ -49,18 +58,18 @@ popup/item_0/id = 0
 popup/item_1/text = "Descending"
 popup/item_1/id = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=760135423]
+[node name="ScrollContainer" type="ScrollContainer" parent="Inventory/VBoxContainer" unique_id=760135423]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer" unique_id=478837419]
+[node name="MarginContainer" type="MarginContainer" parent="Inventory/VBoxContainer/ScrollContainer" unique_id=478837419]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 16
 
-[node name="TextureRepeater" type="FlowContainer" parent="VBoxContainer/ScrollContainer/MarginContainer" unique_id=1903938400]
+[node name="TextureRepeater" type="FlowContainer" parent="Inventory/VBoxContainer/ScrollContainer/MarginContainer" unique_id=1903938400]
 unique_name_in_owner = true
 propagate_maximum_size = false
 layout_mode = 2
@@ -70,13 +79,28 @@ node_count = 42
 texture = ExtResource("2_i8fni")
 metadata/_custom_type_script = "uid://dt80076cvvsfg"
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MarginContainer" unique_id=736050760]
+[node name="MarginContainer" type="MarginContainer" parent="Inventory/VBoxContainer/ScrollContainer/MarginContainer" unique_id=736050760]
 layout_mode = 2
 theme_override_constants/margin_left = 3
 theme_override_constants/margin_top = 4
 
-[node name="ItemListDisplay" parent="VBoxContainer/ScrollContainer/MarginContainer/MarginContainer" unique_id=2000655102 instance=ExtResource("4_cnost")]
+[node name="ItemListDisplay" parent="Inventory/VBoxContainer/ScrollContainer/MarginContainer/MarginContainer" unique_id=2000655102 instance=ExtResource("4_cnost")]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 12
 theme_override_constants/v_separation = 12
+
+[node name="Label" type="Label" parent="." unique_id=2049427940]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -372.0
+offset_top = 29.0
+offset_right = 372.0
+offset_bottom = 130.0
+grow_horizontal = 2
+text = "You can run this scene individually to see it in action.
+This demo showcases:
+- the TextureRepeater, used to dynamically spawn item slots
+- an implementation of the ListDisplay class, enabling items upsertion, sorting and batch-loading"

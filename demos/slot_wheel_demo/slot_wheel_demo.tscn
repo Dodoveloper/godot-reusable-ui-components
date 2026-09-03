@@ -78,8 +78,9 @@ spin_curve = SubResource("Curve_n87h3")
 
 [node name="BoxContainer" type="BoxContainer" parent="SlotMachine/TextureSlotWheel" unique_id=769757280]
 layout_mode = 0
+offset_top = -136.0
 offset_right = 128.0
-offset_bottom = 1952.0
+offset_bottom = 1816.0
 theme_override_constants/separation = 8
 vertical = true
 
@@ -108,7 +109,21 @@ spin_curve = SubResource("Curve_n87h3")
 
 [node name="BoxContainer" type="BoxContainer" parent="SlotMachine/TextSlotWheel" unique_id=1186060183]
 layout_mode = 0
+offset_top = -136.0
 offset_right = 128.0
-offset_bottom = 1248.0
+offset_bottom = 1112.0
 theme_override_constants/separation = 8
 vertical = true
+
+[node name="Label" type="Label" parent="." unique_id=1048105920]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -204.0
+offset_top = 85.0
+offset_right = 204.0
+offset_bottom = 134.0
+grow_horizontal = 2
+text = "You can select the root node and check the properties
+under \"Editor Preview\" to test the slot machine."
