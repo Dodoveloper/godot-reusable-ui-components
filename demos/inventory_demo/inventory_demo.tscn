@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://bwmklymm2vw8k"]
+
+[ext_resource type="Script" uid="uid://bq0lgixr47b8j" path="res://demos/inventory_demo/inventory_demo.gd" id="1_edc4j"]
+[ext_resource type="Script" uid="uid://dt80076cvvsfg" path="res://addons/reusable-ui-components/components/texture_repeater/texture_repeater.gd" id="1_t0vhd"]
+[ext_resource type="Texture2D" uid="uid://4bc30bd2ul65" path="res://demos/inventory_demo/assets/slot_tile.png" id="2_i8fni"]
+[ext_resource type="PackedScene" uid="uid://l0b5h2ihp2bn" path="res://demos/inventory_demo/item_list_display/item_list_display.tscn" id="4_cnost"]
+
+[node name="InventoryDemo" type="PanelContainer" unique_id=339178906]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -164.25
+offset_right = 283.0
+offset_bottom = 164.25
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_edc4j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1165020082]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=317828639]
+layout_mode = 2
+text = "Fancy Dummy Inventory"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=721929002]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Rarity" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1753202053]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Rarity" unique_id=1094953150]
+layout_mode = 2
+text = "Sort by Rarity:"
+
+[node name="SortByRarityButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/Rarity" unique_id=1888466025]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Ascending"
+popup/item_0/id = 0
+popup/item_1/text = "Descending"
+popup/item_1/id = 1
+
+[node name="Quantity" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1371276577]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Quantity" unique_id=1364797333]
+layout_mode = 2
+text = "Sort by Quantity:"
+
+[node name="SortByQuantityButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/Quantity" unique_id=1229164359]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Ascending"
+popup/item_0/id = 0
+popup/item_1/text = "Descending"
+popup/item_1/id = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=760135423]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer" unique_id=478837419]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+
+[node name="TextureRepeater" type="FlowContainer" parent="VBoxContainer/ScrollContainer/MarginContainer" unique_id=1903938400]
+unique_name_in_owner = true
+propagate_maximum_size = false
+layout_mode = 2
+mouse_filter = 0
+script = ExtResource("1_t0vhd")
+node_count = 42
+texture = ExtResource("2_i8fni")
+metadata/_custom_type_script = "uid://dt80076cvvsfg"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MarginContainer" unique_id=736050760]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 4
+
+[node name="ItemListDisplay" parent="VBoxContainer/ScrollContainer/MarginContainer/MarginContainer" unique_id=2000655102 instance=ExtResource("4_cnost")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12

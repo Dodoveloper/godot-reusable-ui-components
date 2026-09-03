@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://d3ydbx1pctkxv"]
+
+[ext_resource type="Script" uid="uid://c4eqaankpfqb1" path="res://addons/reusable-ui-components/components/node_2d_wrapper/node_2d_wrapper.gd" id="1_f5gca"]
+[ext_resource type="Script" uid="uid://bq24rdq3gns0t" path="res://demos/inventory_demo/item/inventory_item.gd" id="1_lhyl1"]
+[ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="2_lhyl1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4dcrc"]
+font_size = 10
+font_color = Color(1, 0.5249126, 0.88122815, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lhyl1"]
+font_size = 14
+font_color = Color(1, 0.8230824, 0.41900522, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InventoryItem" type="CenterContainer" unique_id=544282624]
+script = ExtResource("1_lhyl1")
+
+[node name="Node2DWrapper" type="Control" parent="." unique_id=1683440199 node_paths=PackedStringArray("_target_node")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("1_f5gca")
+_target_node = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://c4eqaankpfqb1"
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2DWrapper" unique_id=1817587684]
+position = Vector2(32, 32)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lhyl1")
+
+[node name="Pivot" type="Control" parent="." unique_id=9889888]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RarityLabel" type="Label" parent="Pivot" unique_id=1352441437]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = -30.5
+offset_right = 31.5
+offset_bottom = -7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Uncommon"
+label_settings = SubResource("LabelSettings_4dcrc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuantityLabel" type="Label" parent="Pivot" unique_id=901652464]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = 9.5
+offset_right = 31.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_lhyl1")
+horizontal_alignment = 1
+vertical_alignment = 2
