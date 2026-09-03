@@ -32,7 +32,6 @@ func _ready() -> void:
 
 func _get_configuration_warnings() -> PackedStringArray:
 	var warnings: PackedStringArray = []
-	
 	if not _target_node:
 		warnings.append("Target Node must be set")
 	
