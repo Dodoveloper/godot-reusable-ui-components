@@ -49,23 +49,8 @@ popup/item_0/id = 0
 popup/item_1/text = "Descending"
 popup/item_1/id = 1
 
-[node name="Quantity" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1371276577]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/Quantity" unique_id=1364797333]
-layout_mode = 2
-text = "Sort by Quantity:"
-
-[node name="SortByQuantityButton" type="OptionButton" parent="VBoxContainer/HBoxContainer/Quantity" unique_id=1229164359]
-unique_name_in_owner = true
-layout_mode = 2
-item_count = 2
-popup/item_0/text = "Ascending"
-popup/item_0/id = 0
-popup/item_1/text = "Descending"
-popup/item_1/id = 1
-
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=760135423]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
