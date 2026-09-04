@@ -132,6 +132,16 @@ func _request_open() -> void:
 ## Virtual method. Override to handle close requests. It should emit [signal close_requested].
 func _request_close() -> void:
 	close_requested.emit()
+
+
+## Virtual method. Override to implement the actual input-blocking logic.
+func _on_block_inputs() -> void:
+	pass
+
+
+## Virtual method. Override to implement the actual input-unblocking logic.
+func _on_unblock_inputs() -> void:
+	pass
 #endregion
 
 
@@ -158,6 +168,7 @@ func _block_inputs() -> void:
 		return
 	
 	_is_blocking_inputs = true
+	_on_block_inputs()
 
 
 func _unblock_inputs() -> void:
@@ -165,16 +176,7 @@ func _unblock_inputs() -> void:
 		return
 	
 	_is_blocking_inputs = false
-
-
-## Virtual method. Override to implement the actual input-blocking logic.
-func _on_block_inputs() -> void:
-	pass
-
-
-## Virtual method. Override to implement the actual input-unblocking logic.
-func _on_unblock_inputs() -> void:
-	pass
+	_on_unblock_inputs()
 
 
 func _on_visibility_changed() -> void:
