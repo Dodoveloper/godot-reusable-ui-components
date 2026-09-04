@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://oyugtuaq6fev"]
+
+[ext_resource type="Script" uid="uid://cgdbrt6r1ac8u" path="res://demos/toggleable_display_demo/pause_menu/pause_menu.gd" id="1_qg7re"]
+
+[node name="PauseMenu" type="PanelContainer" unique_id=1104385984]
+offset_right = 178.0
+offset_bottom = 134.0
+script = ExtResource("1_qg7re")
+should_block_inputs = false
+toggle_action = &"ui_cancel"
+close_action = &"ui_cancel"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2058038281]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=868319547]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=500913192]
+layout_mode = 2
+text = "Fancy Pause Menu"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=59725540]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=855816073]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1882044275]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"

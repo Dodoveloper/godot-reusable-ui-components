@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cnigmfmjivd6p"]
+
+[ext_resource type="Script" uid="uid://ydwqr8j1gggp" path="res://demos/toggleable_display_demo/confirmation_dialog/confirmation_dialog.gd" id="1_sxv5s"]
+
+[node name="ConfirmationDialog" type="PanelContainer" unique_id=84053973]
+offset_right = 315.0
+offset_bottom = 131.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("1_sxv5s")
+mount_mode = 1
+should_block_inputs = false
+
+[node name="Control" type="Control" parent="." unique_id=1985855339]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="Control" unique_id=853318389]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Please Confirm..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Control" unique_id=2033691867]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -18.0
+offset_right = -1.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "x"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1771061161]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=395743054]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1169401529]
+layout_mode = 2
+
+[node name="MessageLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1784552541]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+text = "Are you sure you want to quit?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=948523340]
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1489006879]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Cancel"
+
+[node name="OkButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1173058450]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Ok"

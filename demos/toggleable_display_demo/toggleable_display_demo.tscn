@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c3nepbnjjirk6"]
+
+[ext_resource type="Script" uid="uid://d361mchew4jt3" path="res://demos/toggleable_display_demo/toggleable_display_demo.gd" id="1_5chfn"]
+[ext_resource type="PackedScene" uid="uid://oyugtuaq6fev" path="res://demos/toggleable_display_demo/pause_menu/pause_menu.tscn" id="2_f0rh3"]
+
+[node name="ToggleableDisplayDemo" type="Control" unique_id=1811229356]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5chfn")
+
+[node name="Label" type="Label" parent="." unique_id=1592654651]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -127.0
+offset_right = 546.0
+grow_vertical = 0
+text = "Press \"Esc\" to toggle the Pause Menu while running the scene.
+
+This demo shows a couple of example subclasses of ToggleableDisplay:
+- a PauseMenu, which is cached
+- a ConfirmationDialog, which is Lazy-loaded instead"
+
+[node name="PauseMenu" parent="." unique_id=1104385984 instance=ExtResource("2_f0rh3")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -67.0
+offset_right = 89.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=703095095]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7019608)
