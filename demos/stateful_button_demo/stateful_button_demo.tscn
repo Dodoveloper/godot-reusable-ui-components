@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bxu4d5ok6nwyb"]
+
+[ext_resource type="PackedScene" uid="uid://c6bkljfibln2d" path="res://demos/stateful_button_demo/custom_button.tscn" id="1_v848q"]
+
+[node name="StatefulButtonDemo" type="Control" unique_id=1992896738]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CustomButton" parent="." unique_id=1467611 instance=ExtResource("1_v848q")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = 37.0
+offset_right = 225.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=2146133879]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -370.0
+offset_top = 53.0
+offset_right = 370.0
+offset_bottom = 310.0
+grow_horizontal = 2
+text = "StatefulButton can be composed to create buttons which are more complex than \"vanilla\" ones.
+
+In this demo, a StatefulButton with no visuals of its own is layered on top of
+a Node2DWrapper (wrapping aSprite2D), so it can react to input while
+the Sprite2D handles all the aesthetics. 
+
+Its clickable area is simply defined by its own rect, here set to match the
+Sprite2D's bounds; the pink ReferenceRect around it highlights this area. 
+The label on the right listens to the button's state_changed signal and 
+displays its current State (NORMAL, HOVER, PRESSED or DISABLED) in real time."

@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://c6bkljfibln2d"]
+
+[ext_resource type="Script" uid="uid://c4eqaankpfqb1" path="res://addons/reusable-ui-components/components/node_2d_wrapper/node_2d_wrapper.gd" id="1_7x123"]
+[ext_resource type="Script" uid="uid://dtr8nrqrrr7g0" path="res://demos/stateful_button_demo/custom_button.gd" id="1_oty2q"]
+[ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="2_oty2q"]
+[ext_resource type="Script" uid="uid://d3mmt424d76ce" path="res://addons/reusable-ui-components/components/stateful_button/stateful_button.gd" id="3_leiac"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dcrc"]
+bg_color = Color(0.19592275, 0.19475485, 0.6, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_4dcrc"]
+font_size = 64
+
+[node name="CustomButton" type="PanelContainer" unique_id=1467611]
+custom_minimum_size = Vector2(450, 0)
+offset_right = 312.0
+offset_bottom = 136.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4dcrc")
+script = ExtResource("1_oty2q")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=25109361]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2039216976]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Node2DWrapper" type="Control" parent="MarginContainer/HBoxContainer" unique_id=507478453 node_paths=PackedStringArray("_target_node")]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("1_7x123")
+_target_node = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://c4eqaankpfqb1"
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/HBoxContainer/Node2DWrapper" unique_id=1265643627]
+position = Vector2(64, 64)
+texture = ExtResource("2_oty2q")
+
+[node name="StatefulButton" type="BaseButton" parent="MarginContainer/HBoxContainer/Node2DWrapper" unique_id=25636974]
+unique_name_in_owner = true
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+oversampling_with_scale = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+custom_minimum_size = Vector2(0, 0)
+custom_maximum_size = Vector2(-1, -1)
+propagate_maximum_size = false
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+pivot_offset_ratio = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+offset_transform_enabled = false
+offset_transform_position = Vector2(0, 0)
+offset_transform_position_ratio = Vector2(0, 0)
+offset_transform_scale = Vector2(1, 1)
+offset_transform_rotation = 0.0
+offset_transform_pivot = Vector2(0, 0)
+offset_transform_pivot_ratio = Vector2(0.5, 0.5)
+offset_transform_visual_only = true
+localize_numeral_system = true
+layout_direction = 0
+translation_context = &""
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+focus_behavior_recursive = 0
+mouse_filter = 0
+mouse_behavior_recursive = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+accessibility_name = ""
+accessibility_description = ""
+accessibility_live = 0
+accessibility_controls_nodes = Array[NodePath]([])
+accessibility_described_by_nodes = Array[NodePath]([])
+accessibility_labeled_by_nodes = Array[NodePath]([])
+accessibility_flow_to_nodes = Array[NodePath]([])
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("3_leiac")
+metadata/_custom_type_script = "uid://d3mmt424d76ce"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="MarginContainer/HBoxContainer/Node2DWrapper/StatefulButton" unique_id=212306072]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+border_color = Color(1, 0.3342737, 0.41656762, 1)
+border_width = 2.0
+
+[node name="StateLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1121231102]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "STATE"
+label_settings = SubResource("LabelSettings_4dcrc")
+horizontal_alignment = 1
