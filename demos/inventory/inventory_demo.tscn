@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bq0lgixr47b8j" path="res://demos/inventory/inventory_demo.gd" id="1_q1riq"]
 [ext_resource type="Script" uid="uid://dt80076cvvsfg" path="res://addons/reusable-ui-components/components/texture_repeater/texture_repeater.gd" id="2_y5v85"]
-[ext_resource type="Texture2D" uid="uid://4bc30bd2ul65" path="res://demos/inventory/assets/slot_tile.png" id="3_j1l18"]
+[ext_resource type="Texture2D" uid="uid://4bc30bd2ul65" path="res://demos/assets/slot_tile.png" id="3_j1l18"]
 [ext_resource type="PackedScene" uid="uid://l0b5h2ihp2bn" path="res://demos/inventory/item_list_display/item_list_display.tscn" id="4_mgqcu"]
 
 [node name="InventoryDemo" type="Control" unique_id=466065189]

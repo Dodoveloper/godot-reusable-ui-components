@@ -150,6 +150,7 @@ grow_vertical = 2
 mouse_filter = 2
 border_color = Color(1, 0.3342737, 0.41656762, 1)
 border_width = 2.0
+editor_only = false
 
 [node name="StateLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1121231102]
 unique_name_in_owner = true

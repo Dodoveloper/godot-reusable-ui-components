@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db0oa6hs4qokd"
-path="res://.godot/imported/spritesheet_coins.png-210152a111c7cbdf3f168705d97b369b.ctex"
+path="res://.godot/imported/spritesheet_coins.png-d1374979477d98418e394c0ec7ef11b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://demos/slot_wheel/assets/spritesheet_coins.png"
-dest_files=["res://.godot/imported/spritesheet_coins.png-210152a111c7cbdf3f168705d97b369b.ctex"]
+source_file="res://demos/assets/spritesheet_coins.png"
+dest_files=["res://.godot/imported/spritesheet_coins.png-d1374979477d98418e394c0ec7ef11b5.ctex"]
 
 [params]
 

@@ -74,4 +74,6 @@ offset_top = 60.0
 offset_right = 764.0
 offset_bottom = 109.0
 text = "Each ScaleWrapper is allowing their direct Control
-child to be scaled inside a Container node."
+child to be scaled inside a Container node.
+
+You can verify by looking at their scale property."

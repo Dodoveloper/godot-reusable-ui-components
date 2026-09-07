@@ -23,8 +23,7 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://demos/": "teal",
-"res://demos/inventory/assets/": "pink",
-"res://demos/slot_wheel/assets/": "pink"
+"res://demos/assets/": "pink"
 }
 
 [physics]

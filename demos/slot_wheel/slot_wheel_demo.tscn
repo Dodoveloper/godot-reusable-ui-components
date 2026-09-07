@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://i6jn3yhix04o" path="res://addons/reusable-ui-components/components/slot_wheel/slot_wheel.gd" id="1_jnn14"]
 [ext_resource type="Script" uid="uid://k36h7yx0jqww" path="res://demos/slot_wheel/slot_wheel_demo.gd" id="1_n87h3"]
-[ext_resource type="Texture2D" uid="uid://db0oa6hs4qokd" path="res://demos/slot_wheel/assets/spritesheet_coins.png" id="2_jnn14"]
+[ext_resource type="Texture2D" uid="uid://db0oa6hs4qokd" path="res://demos/assets/spritesheet_coins.png" id="2_jnn14"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnn14"]
 atlas = ExtResource("2_jnn14")
