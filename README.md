@@ -1,10 +1,11 @@
 # Reusable UI Components for Godot
 
-> Reusable, composition-first UI pieces for Godot — built to be combined with each other and with vanilla nodes.
+*Reusable, composition-first UI pieces for Godot — built to be combined with each other and with vanilla nodes.*
 
 ## Overview
 
 **Reusable UI Components** is a collection of generic, framework-agnostic UI components and base classes for Godot 4, built around composition rather than inheritance-heavy customization.
+
 Each component solves one focused problem and is designed to be dropped into any project and combined with the others and with vanilla Godot nodes.
 
 The addon ships with a runnable demo for every component, so you can see exactly how each one behaves and how it's wired up before using it in your own project.
@@ -54,7 +55,7 @@ Every component has a corresponding demo scene under `demos/`, each runnable ind
 | `demos/inventory/` | `ListDisplay` subclassed into an `ItemListDisplay`, plus `TextureRepeater` |
 | `demos/node_2d_wrapper/` | `Node2DWrapper` embedding a `Node2D` scene inside a `Control` layout |
 | `demos/scale_wrapper/` | `ScaleWrapper` letting a child `Control` scale independently of its container |
-| `demos/slot_wheel/` | `SlotWheel` spinning, pausing and resuming |
+| `demos/slot_wheel/` | `SlotWheel` spinning, pausing and resuming; embedded in a slot machine |
 | `demos/stateful_button/` | `StatefulButton` composed with a `Node2DWrapper`-wrapped sprite to build a custom animated button |
 | `demos/toggleable_display/` | `ToggleableDisplay` subclassed into a `ConfirmationDialog` and a `PauseMenu` |
 
