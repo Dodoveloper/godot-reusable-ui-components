@@ -30,7 +30,7 @@ Intended to be subclassed to fit your own data and visuals; they provide the lif
 
 ## Requirements
 
-- Godot **4.7** or later is recommended. It may work on older versions, but I haven't tested it.
+- Godot **4.7** or later is recommended. It may work on older versions, but it hasn't been tested.
 - No external dependencies or plugins.
 
 ## Installation
@@ -70,4 +70,4 @@ Everything in this repository has been reviewed and is maintained by the author.
 
 ## License
 
-Distributed under the MIT License — see [`LICENSE`](LICENSE) for details.
+Distributed under the [`LICENSE`](MIT License).
