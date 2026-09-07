@@ -30,7 +30,7 @@ Intended to be subclassed to fit your own data and visuals; they provide the lif
 
 ## Requirements
 
-- Godot **4.7** or later (GDScript, no C# dependency).
+- Godot **4.7** or later is recommended. It may work on older versions, but I haven't tested it.
 - No external dependencies or plugins.
 
 ## Installation
