@@ -42,7 +42,7 @@ Intended to be subclassed to fit your own data and visuals; they provide the lif
 3. Click **Download**, then **Install** — only the `addons/reusable-ui-components/` folder will be added to your project.
 
 ### Manual installation
-1. Download or clone this repository.
+1. Download a [release](https://github.com/Dodoveloper/godot-reusable-ui-components/releases), or this repository.
 2. Copy the `addons/reusable-ui-components/` folder into your own project's `addons/` folder.
 3. (Optional) Enable it as a plugin under **Project > Project Settings > Plugins** if you want it listed there — none of the components require the plugin to be enabled to work, since they're plain `class_name` scripts/scenes.
 
@@ -68,6 +68,12 @@ This project was developed with the assistance of AI tools.
 The majority of the code was written by hand; AI was used for code review, help with architecture and design decisions, and to assist with writing documentation.
 
 Everything in this repository has been reviewed and is maintained by the author.
+
+## Credits
+
+- Logo and icon design by [Northide](https://x.com/dev_northide)
+- Node icons taken from [@icons](https://github.com/Voxybuns/at-icons)
+- Demo assets provided by [Kenney](https://kenney.nl)
 
 ## License
 
