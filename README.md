@@ -1,3 +1,5 @@
+<img src="icon.png" width="128" height="128">
+
 # Reusable UI Components for Godot
 
 *Reusable, composition-first UI pieces for Godot — built to be combined with each other and with vanilla nodes.*
@@ -30,8 +32,7 @@ Intended to be subclassed to fit your own data and visuals; they provide the lif
 
 ## Requirements
 
-- Godot **4.7** or later is recommended. It may work on older versions, but it hasn't been tested.
-- No external dependencies or plugins.
+- Godot **4.5** or later.
 
 ## Installation
 
