@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://oyugtuaq6fev"]
 
-[ext_resource type="Script" uid="uid://cgdbrt6r1ac8u" path="res://demos/toggleable_display_demo/pause_menu/pause_menu.gd" id="1_qg7re"]
+[ext_resource type="Script" uid="uid://cgdbrt6r1ac8u" path="res://demos/toggleable_display/pause_menu/pause_menu.gd" id="1_qg7re"]
 
 [node name="PauseMenu" type="PanelContainer" unique_id=1104385984]
 offset_right = 178.0

@@ -1,9 +1,9 @@
 extends Control
 
 
-const PauseMenu = preload("res://demos/toggleable_display_demo/pause_menu/pause_menu.gd")
-const ConfirmationDialogControl = preload("res://demos/toggleable_display_demo/confirmation_dialog/confirmation_dialog.gd")
-const ConfirmationDialogScene = preload("res://demos/toggleable_display_demo/confirmation_dialog/confirmation_dialog.tscn")
+const PauseMenu = preload("./pause_menu/pause_menu.gd")
+const ConfirmationDialogControl = preload("./confirmation_dialog/confirmation_dialog.gd")
+const ConfirmationDialogScene = preload("./confirmation_dialog/confirmation_dialog.tscn")
 
 @onready var _color_rect: ColorRect = %ColorRect
 @onready var _pause_menu: PauseMenu = %PauseMenu

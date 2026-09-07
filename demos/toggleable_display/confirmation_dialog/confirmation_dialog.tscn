@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnigmfmjivd6p"]
 
-[ext_resource type="Script" uid="uid://ydwqr8j1gggp" path="res://demos/toggleable_display_demo/confirmation_dialog/confirmation_dialog.gd" id="1_sxv5s"]
+[ext_resource type="Script" uid="uid://ydwqr8j1gggp" path="res://demos/toggleable_display/confirmation_dialog/confirmation_dialog.gd" id="1_sxv5s"]
 
 [node name="ConfirmationDialog" type="PanelContainer" unique_id=84053973]
 offset_right = 315.0

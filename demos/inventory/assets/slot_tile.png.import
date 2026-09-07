@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db0oa6hs4qokd"
-path="res://.godot/imported/spritesheet_coins.png-0fb104b66cd9415c188d7d937dcebb4d.ctex"
+uid="uid://4bc30bd2ul65"
+path="res://.godot/imported/slot_tile.png-1eed2899843f8814835b45b9d75a3e72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://demos/slot_wheel_demo/assets/spritesheet_coins.png"
-dest_files=["res://.godot/imported/spritesheet_coins.png-0fb104b66cd9415c188d7d937dcebb4d.ctex"]
+source_file="res://demos/inventory/assets/slot_tile.png"
+dest_files=["res://.godot/imported/slot_tile.png-1eed2899843f8814835b45b9d75a3e72.ctex"]
 
 [params]
 

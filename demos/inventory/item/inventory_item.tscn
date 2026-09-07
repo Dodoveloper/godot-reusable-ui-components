@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3ydbx1pctkxv"]
 
 [ext_resource type="Script" uid="uid://c4eqaankpfqb1" path="res://addons/reusable-ui-components/components/node_2d_wrapper/node_2d_wrapper.gd" id="1_f5gca"]
-[ext_resource type="Script" uid="uid://bq24rdq3gns0t" path="res://demos/inventory_demo/item/inventory_item.gd" id="1_lhyl1"]
+[ext_resource type="Script" uid="uid://bq24rdq3gns0t" path="res://demos/inventory/item/inventory_item.gd" id="1_lhyl1"]
 [ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="2_lhyl1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4dcrc"]

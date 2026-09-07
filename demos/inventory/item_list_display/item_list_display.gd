@@ -1,7 +1,7 @@
 extends ListDisplay
 
 
-const InventoryItem = preload("res://demos/inventory_demo/item/inventory_item.gd")
+const InventoryItem = preload("../item/inventory_item.gd")
 
 @export var InventoryItemScene: PackedScene
 

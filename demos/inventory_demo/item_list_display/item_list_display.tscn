@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://l0b5h2ihp2bn"]
-
-[ext_resource type="Script" uid="uid://448pimgjxmh0" path="res://demos/inventory_demo/item_list_display/item_list_display.gd" id="1_ple7i"]
-[ext_resource type="PackedScene" uid="uid://d3ydbx1pctkxv" path="res://demos/inventory_demo/item/inventory_item.tscn" id="2_kcn0n"]
-
-[node name="ItemListDisplay" type="FlowContainer" unique_id=2000655102]
-script = ExtResource("1_ple7i")
-InventoryItemScene = ExtResource("2_kcn0n")
