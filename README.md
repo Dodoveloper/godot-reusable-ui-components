@@ -1,4 +1,6 @@
-<img src="logo.png" width="128" height="128">
+<div align="center">
+  <img src="logo.png" width="128" height="128">
+</div>
 
 # Reusable UI Components for Godot
 
@@ -77,4 +79,4 @@ Everything in this repository has been reviewed and is maintained by the author.
 
 ## License
 
-Distributed under the [`LICENSE`](MIT License).
+Distributed under the [MIT LICENSE](LICENSE).
