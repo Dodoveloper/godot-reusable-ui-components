@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dmd6otkidl6x"]
+
+[ext_resource type="Script" uid="uid://dhw7j8brf5en3" path="res://addons/reusable-ui-components/components/icon_value_display/icon_value_display.gd" id="1_8d7ck"]
+[ext_resource type="Texture2D" uid="uid://b3hr5k3if0voq" path="res://demos/assets/heart_outlined.png" id="2_8d7ck"]
+[ext_resource type="Texture2D" uid="uid://db0oa6hs4qokd" path="res://demos/assets/spritesheet_coins.png" id="4_ub7r0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mxdir"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_aquo5"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+outline_size = 16
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d7ck"]
+atlas = ExtResource("4_ub7r0")
+region = Rect2(0, 750, 148, 148)
+
+[node name="IconValueDisplayDemo" type="Control" unique_id=1911612345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=267744877]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.5
+offset_top = -68.0
+offset_right = 163.5
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="HealthDisplay" type="HBoxContainer" parent="VBoxContainer" unique_id=19522091 node_paths=PackedStringArray("icon_node", "value_node")]
+layout_mode = 2
+theme_override_constants/separation = 16
+script = ExtResource("1_8d7ck")
+icon_node = NodePath("Icon")
+value_node = NodePath("Value")
+label_settings = SubResource("LabelSettings_mxdir")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HealthDisplay" unique_id=421312804]
+layout_mode = 2
+texture = ExtResource("2_8d7ck")
+stretch_mode = 3
+
+[node name="Value" type="Label" parent="VBoxContainer/HealthDisplay" unique_id=1700578061]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = SubResource("LabelSettings_mxdir")
+horizontal_alignment = 1
+
+[node name="CurrencyDisplay" type="HBoxContainer" parent="VBoxContainer" unique_id=1905872646 node_paths=PackedStringArray("icon_node", "value_node")]
+layout_mode = 2
+theme_override_constants/separation = 16
+script = ExtResource("1_8d7ck")
+icon_node = NodePath("Icon")
+value_node = NodePath("Value")
+format_string = "{value} ¢"
+label_settings = SubResource("LabelSettings_aquo5")
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/CurrencyDisplay" unique_id=1806887813]
+layout_mode = 2
+texture = SubResource("AtlasTexture_8d7ck")
+stretch_mode = 3
+
+[node name="Value" type="Label" parent="VBoxContainer/CurrencyDisplay" unique_id=1826019823]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0 ¢"
+label_settings = SubResource("LabelSettings_aquo5")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1061432274]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -221.5
+offset_top = 52.0
+offset_right = 221.5
+offset_bottom = 179.0
+grow_horizontal = 2
+text = "You can attach the IconValueDisplay script to any Control
+you want, and let it handle how things should be laid out.
+
+You can also extend it to create more complex behavior,
+like animations, etc."
