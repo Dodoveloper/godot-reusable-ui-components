@@ -1,9 +1,26 @@
 [gd_scene format=3 uid="uid://bwmklymm2vw8k"]
 
 [ext_resource type="Script" uid="uid://bq0lgixr47b8j" path="res://demos/inventory/inventory_demo.gd" id="1_q1riq"]
+[ext_resource type="Texture2D" uid="uid://blihmukpa0j1d" path="res://demos/assets/art/tilemap_packed.png" id="2_q1riq"]
 [ext_resource type="Script" uid="uid://dt80076cvvsfg" path="res://addons/reusable-ui-components/components/texture_repeater/texture_repeater.gd" id="2_y5v85"]
-[ext_resource type="Texture2D" uid="uid://4bc30bd2ul65" path="res://demos/assets/slot_tile.png" id="3_j1l18"]
+[ext_resource type="FontFile" uid="uid://c50ge3fc3sgn" path="res://demos/assets/fonts/kenney_pixel.ttf" id="3_y5v85"]
+[ext_resource type="Theme" uid="uid://dex65sj4cjk33" path="res://demos/assets/themes/default_theme.tres" id="4_h7xxo"]
+[ext_resource type="PackedScene" uid="uid://c5o7xuwx7yh8m" path="res://addons/reusable-ui-components/components/scale_wrapper/scale_wrapper.tscn" id="4_j1l18"]
 [ext_resource type="PackedScene" uid="uid://l0b5h2ihp2bn" path="res://demos/inventory/item_list_display/item_list_display.tscn" id="4_mgqcu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dcrc"]
+atlas = ExtResource("2_q1riq")
+region = Rect2(128, 128, 96, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1riq"]
+font = ExtResource("3_y5v85")
+font_size = 28
+outline_size = 8
+outline_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1whn7"]
+atlas = ExtResource("2_q1riq")
+region = Rect2(32, 32, 32, 32)
 
 [node name="InventoryDemo" type="Control" unique_id=466065189]
 layout_mode = 3
@@ -21,74 +38,125 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -283.0
-offset_top = -164.25
-offset_right = 283.0
-offset_bottom = 164.25
+offset_left = -567.5
+offset_top = -139.5625
+offset_right = 567.5
+offset_bottom = 313.5625
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("4_h7xxo")
+theme_type_variation = &"PanelContainerLight"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Inventory" unique_id=1165020082]
+[node name="Control" type="Control" parent="Inventory" unique_id=515343071]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Inventory/Control" unique_id=163188302]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.0
+offset_top = -35.0
+offset_right = 128.0
+offset_bottom = 29.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_4dcrc")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Inventory/Control/TextureRect" unique_id=317828639]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -16.5
+offset_right = 62.0
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fancy Inventory"
+label_settings = SubResource("LabelSettings_q1riq")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Inventory" unique_id=630328045]
+layout_mode = 2
+theme_override_constants/margin_top = 54
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Inventory/MarginContainer" unique_id=1165020082]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Label" type="Label" parent="Inventory/VBoxContainer" unique_id=317828639]
-layout_mode = 2
-text = "Fancy Dummy Inventory"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Inventory/VBoxContainer" unique_id=721929002]
+[node name="HBoxContainer" type="HBoxContainer" parent="Inventory/MarginContainer/VBoxContainer" unique_id=721929002]
 layout_mode = 2
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="Rarity" type="HBoxContainer" parent="Inventory/VBoxContainer/HBoxContainer" unique_id=1753202053]
+[node name="Rarity" type="HBoxContainer" parent="Inventory/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1753202053]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Inventory/VBoxContainer/HBoxContainer/Rarity" unique_id=1094953150]
+[node name="Label" type="Label" parent="Inventory/MarginContainer/VBoxContainer/HBoxContainer/Rarity" unique_id=1094953150]
 layout_mode = 2
 text = "Sort by Rarity:"
+label_settings = SubResource("LabelSettings_q1riq")
 
-[node name="SortByRarityButton" type="OptionButton" parent="Inventory/VBoxContainer/HBoxContainer/Rarity" unique_id=1888466025]
+[node name="SortByRarityButton" type="OptionButton" parent="Inventory/MarginContainer/VBoxContainer/HBoxContainer/Rarity" unique_id=1888466025]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("4_h7xxo")
+theme_type_variation = &"OptionButtonDark"
 item_count = 2
 popup/item_0/text = "Ascending"
 popup/item_0/id = 0
 popup/item_1/text = "Descending"
 popup/item_1/id = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Inventory/VBoxContainer" unique_id=760135423]
+[node name="ScrollContainer" type="ScrollContainer" parent="Inventory/MarginContainer/VBoxContainer" unique_id=760135423]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+horizontal_scroll_mode = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Inventory/VBoxContainer/ScrollContainer" unique_id=478837419]
+[node name="MarginContainer" type="MarginContainer" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer" unique_id=478837419]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/margin_left = 16
 
-[node name="TextureRepeater" type="FlowContainer" parent="Inventory/VBoxContainer/ScrollContainer/MarginContainer" unique_id=1903938400]
-unique_name_in_owner = true
-propagate_maximum_size = false
+[node name="ScaleWrapper" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=778595757 instance=ExtResource("4_j1l18")]
+custom_minimum_size = Vector2(1090, 440)
 layout_mode = 2
+
+[node name="TextureRepeater" type="FlowContainer" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ScaleWrapper" unique_id=1903938400]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(436, 0)
+propagate_maximum_size = false
+layout_mode = 1
+offset_right = 436.0
+offset_bottom = 176.0
+scale = Vector2(2.5, 2.5)
 mouse_filter = 0
 script = ExtResource("2_y5v85")
-node_count = 42
-texture = ExtResource("3_j1l18")
+node_count = 60
+texture = SubResource("AtlasTexture_1whn7")
 metadata/_custom_type_script = "uid://dt80076cvvsfg"
 
-[node name="MarginContainer" type="MarginContainer" parent="Inventory/VBoxContainer/ScrollContainer/MarginContainer" unique_id=736050760]
+[node name="MarginContainer" type="MarginContainer" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=736050760]
 layout_mode = 2
-theme_override_constants/margin_left = 3
-theme_override_constants/margin_top = 4
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
 
-[node name="ItemListDisplay" parent="Inventory/VBoxContainer/ScrollContainer/MarginContainer/MarginContainer" unique_id=2000655102 instance=ExtResource("4_mgqcu")]
+[node name="ItemListDisplay" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/MarginContainer" unique_id=2000655102 instance=ExtResource("4_mgqcu")]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_constants/h_separation = 12
-theme_override_constants/v_separation = 12
+theme_override_constants/h_separation = 26
+theme_override_constants/v_separation = 26
 
 [node name="Label" type="Label" parent="." unique_id=2049427940]
 layout_mode = 1

@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://d3ydbx1pctkxv"]
 
 [ext_resource type="Script" uid="uid://c4eqaankpfqb1" path="res://addons/reusable-ui-components/components/node_2d_wrapper/node_2d_wrapper.gd" id="1_f5gca"]
+[ext_resource type="Theme" uid="uid://dex65sj4cjk33" path="res://demos/assets/themes/default_theme.tres" id="1_jtyue"]
 [ext_resource type="Script" uid="uid://bq24rdq3gns0t" path="res://demos/inventory/item/inventory_item.gd" id="1_lhyl1"]
 [ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="2_lhyl1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4dcrc"]
-font_size = 10
 font_color = Color(1, 0.5249126, 0.88122815, 1)
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lhyl1"]
-font_size = 14
 font_color = Color(1, 0.8230824, 0.41900522, 1)
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [node name="InventoryItem" type="CenterContainer" unique_id=544282624]
+theme = ExtResource("1_jtyue")
 script = ExtResource("1_lhyl1")
 
 [node name="Node2DWrapper" type="Control" parent="." unique_id=1683440199 node_paths=PackedStringArray("_target_node")]
@@ -72,4 +72,4 @@ grow_vertical = 2
 text = "0"
 label_settings = SubResource("LabelSettings_lhyl1")
 horizontal_alignment = 1
-vertical_alignment = 2
+vertical_alignment = 1

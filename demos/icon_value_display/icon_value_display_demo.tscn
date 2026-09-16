@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dmd6otkidl6x"]
 
 [ext_resource type="Script" uid="uid://dhw7j8brf5en3" path="res://addons/reusable-ui-components/components/icon_value_display/icon_value_display.gd" id="1_8d7ck"]
-[ext_resource type="Texture2D" uid="uid://b3hr5k3if0voq" path="res://demos/assets/heart_outlined.png" id="2_8d7ck"]
-[ext_resource type="Texture2D" uid="uid://db0oa6hs4qokd" path="res://demos/assets/spritesheet_coins.png" id="4_ub7r0"]
+[ext_resource type="Texture2D" uid="uid://b3hr5k3if0voq" path="res://demos/assets/art/heart_outlined.png" id="2_8d7ck"]
+[ext_resource type="Texture2D" uid="uid://db0oa6hs4qokd" path="res://demos/assets/art/spritesheet_coins.png" id="4_ub7r0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mxdir"]
 font_size = 64

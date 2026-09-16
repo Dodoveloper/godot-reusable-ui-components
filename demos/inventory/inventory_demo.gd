@@ -4,7 +4,7 @@ extends Control
 const DUMMY_ITEM_COUNT := 100
 const PAGE_SIZE := 20
 const SCROLL_LOAD_THRESHOLD := 0.5
-const SLOTS_PER_ROW := 7
+const SLOTS_PER_ROW := 12
 const MIN_TEXTURE_REPEATER_SLOTS := 42
 
 @onready var _sort_by_rarity_button: OptionButton = %SortByRarityButton
