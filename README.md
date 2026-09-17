@@ -75,7 +75,7 @@ Everything in this repository has been reviewed and is maintained by the author.
 
 - Logo and icon design by [Northide](https://x.com/dev_northide)
 - Node icons taken from [@icons](https://github.com/Voxybuns/at-icons)
-- Demo assets provided by [Kenney](https://kenney.nl)
+- Demo assets provided by [Kenney](https://kenney.nl) and [Vecteezy](https://www.vecteezy.com)
 
 ## License
 
