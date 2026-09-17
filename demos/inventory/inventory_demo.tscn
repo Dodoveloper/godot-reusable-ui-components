@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://bwmklymm2vw8k"]
 
 [ext_resource type="Script" uid="uid://bq0lgixr47b8j" path="res://demos/inventory/inventory_demo.gd" id="1_q1riq"]
+[ext_resource type="Shader" uid="uid://7aloku06h7dr" path="res://demos/inventory/darkened_blur.gdshader" id="2_gmpdx"]
 [ext_resource type="Texture2D" uid="uid://blihmukpa0j1d" path="res://demos/assets/art/tilemap_packed.png" id="2_q1riq"]
 [ext_resource type="Script" uid="uid://dt80076cvvsfg" path="res://addons/reusable-ui-components/components/texture_repeater/texture_repeater.gd" id="2_y5v85"]
+[ext_resource type="Texture2D" uid="uid://b1jg0s04dsges" path="res://demos/assets/art/backgrounds/background.jpg" id="3_p5hj0"]
 [ext_resource type="FontFile" uid="uid://c50ge3fc3sgn" path="res://demos/assets/fonts/kenney_pixel.ttf" id="3_y5v85"]
 [ext_resource type="Theme" uid="uid://dex65sj4cjk33" path="res://demos/assets/themes/default_theme.tres" id="4_h7xxo"]
 [ext_resource type="PackedScene" uid="uid://c5o7xuwx7yh8m" path="res://addons/reusable-ui-components/components/scale_wrapper/scale_wrapper.tscn" id="4_j1l18"]
 [ext_resource type="PackedScene" uid="uid://l0b5h2ihp2bn" path="res://demos/inventory/item_list_display/item_list_display.tscn" id="4_mgqcu"]
+[ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="4_p5hj0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4dcrc"]
+shader = ExtResource("2_gmpdx")
+shader_parameter/lod = 1.200000057
+shader_parameter/mix_percentage = 0.2000000095
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4dcrc"]
 atlas = ExtResource("2_q1riq")
@@ -31,6 +39,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q1riq")
 
+[node name="Background" type="TextureRect" parent="." unique_id=1640369161]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_p5hj0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Blur" type="TextureRect" parent="." unique_id=2089531055]
+material = SubResource("ShaderMaterial_4dcrc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_p5hj0")
+
 [node name="Inventory" type="PanelContainer" parent="." unique_id=339178906]
 layout_mode = 1
 anchors_preset = 8
@@ -38,14 +67,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -567.5
-offset_top = -139.5625
-offset_right = 567.5
-offset_bottom = 313.5625
+offset_left = -477.75
+offset_top = -226.5625
+offset_right = 477.75
+offset_bottom = 226.5625
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_h7xxo")
-theme_type_variation = &"PanelContainerLight"
 
 [node name="Control" type="Control" parent="Inventory" unique_id=515343071]
 layout_mode = 2
@@ -87,6 +115,7 @@ horizontal_alignment = 1
 [node name="MarginContainer" type="MarginContainer" parent="Inventory" unique_id=630328045]
 layout_mode = 2
 theme_override_constants/margin_top = 54
+theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Inventory/MarginContainer" unique_id=1165020082]
@@ -130,16 +159,15 @@ size_flags_vertical = 3
 theme_override_constants/margin_left = 16
 
 [node name="ScaleWrapper" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer" unique_id=778595757 instance=ExtResource("4_j1l18")]
-custom_minimum_size = Vector2(1090, 440)
+custom_minimum_size = Vector2(907.49994, 530)
 layout_mode = 2
 
 [node name="TextureRepeater" type="FlowContainer" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/ScaleWrapper" unique_id=1903938400]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(436, 0)
 propagate_maximum_size = false
 layout_mode = 1
-offset_right = 436.0
-offset_bottom = 176.0
+offset_right = 362.99997
+offset_bottom = 212.0
 scale = Vector2(2.5, 2.5)
 mouse_filter = 0
 script = ExtResource("2_y5v85")
@@ -164,9 +192,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -372.0
-offset_top = 29.0
+offset_top = -121.0
 offset_right = 372.0
-offset_bottom = 130.0
+offset_bottom = -20.0
 grow_horizontal = 2
 text = "You can run this scene individually to see it in action.
 This demo showcases:

@@ -28,7 +28,8 @@ func _on_pause_menu_close_requested() -> void:
 func _on_pause_menu_quit_requested() -> void:
 	var dialog: ConfirmationDialogControl = ConfirmationDialogScene.instantiate()
 	_color_rect.add_child(dialog)
-	dialog.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	dialog.pivot_offset_ratio = Vector2(0.5, 0.5)
+	dialog.set_anchors_and_offsets_preset(Control.PRESET_CENTER, Control.PRESET_MODE_KEEP_SIZE)
 	dialog.close_requested.connect(_on_dialog_close_requested.bind(dialog), CONNECT_ONE_SHOT)
 	dialog.confirmed.connect(_on_dialog_confirmed, CONNECT_ONE_SHOT)
 	

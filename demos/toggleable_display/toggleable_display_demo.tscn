@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://d361mchew4jt3" path="res://demos/toggleable_display/toggleable_display_demo.gd" id="1_5chfn"]
 [ext_resource type="PackedScene" uid="uid://oyugtuaq6fev" path="res://demos/toggleable_display/pause_menu/pause_menu.tscn" id="2_f0rh3"]
+[ext_resource type="Texture2D" uid="uid://b1jg0s04dsges" path="res://demos/assets/art/backgrounds/background.jpg" id="2_tb2ab"]
+[ext_resource type="Shader" uid="uid://7aloku06h7dr" path="res://demos/inventory/darkened_blur.gdshader" id="3_xq6xu"]
+[ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="4_624fy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f04he"]
+shader = ExtResource("3_xq6xu")
+shader_parameter/lod = 1.200000057
+shader_parameter/mix_percentage = 0.50000002375
 
 [node name="ToggleableDisplayDemo" type="Control" unique_id=1811229356]
 layout_mode = 3
@@ -11,6 +19,27 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5chfn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=72225288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tb2ab")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Blur" type="TextureRect" parent="." unique_id=283298604]
+material = SubResource("ShaderMaterial_f04he")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_624fy")
 
 [node name="Label" type="Label" parent="." unique_id=1592654651]
 layout_mode = 1
@@ -40,6 +69,7 @@ offset_right = 89.0
 offset_bottom = 67.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=703095095]
 unique_name_in_owner = true

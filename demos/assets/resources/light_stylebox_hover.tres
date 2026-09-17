@@ -1,0 +1,15 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cvwcqh6g1v3xq"]
+
+[ext_resource type="Texture2D" uid="uid://blihmukpa0j1d" path="res://demos/assets/art/tilemap_packed.png" id="1_k6nuu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo4dy"]
+atlas = ExtResource("1_k6nuu")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+texture = SubResource("AtlasTexture_xo4dy")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+modulate_color = Color(1.1638972, 1.1638972, 1.1638972, 1)

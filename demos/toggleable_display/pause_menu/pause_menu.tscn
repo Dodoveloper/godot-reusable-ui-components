@@ -1,10 +1,20 @@
 [gd_scene format=3 uid="uid://oyugtuaq6fev"]
 
+[ext_resource type="Theme" uid="uid://dex65sj4cjk33" path="res://demos/assets/themes/default_theme.tres" id="1_deak6"]
 [ext_resource type="Script" uid="uid://cgdbrt6r1ac8u" path="res://demos/toggleable_display/pause_menu/pause_menu.gd" id="1_qg7re"]
+[ext_resource type="FontFile" uid="uid://c50ge3fc3sgn" path="res://demos/assets/fonts/kenney_pixel.ttf" id="3_glgn1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6r8rc"]
+font = ExtResource("3_glgn1")
+font_size = 28
+outline_size = 8
+outline_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
 
 [node name="PauseMenu" type="PanelContainer" unique_id=1104385984]
 offset_right = 178.0
 offset_bottom = 134.0
+scale = Vector2(2, 2)
+theme = ExtResource("1_deak6")
 script = ExtResource("1_qg7re")
 should_block_inputs = false
 toggle_action = &"ui_cancel"
@@ -22,7 +32,12 @@ theme_override_constants/separation = 16
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=500913192]
 layout_mode = 2
 text = "Fancy Pause Menu"
+label_settings = SubResource("LabelSettings_6r8rc")
 horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1814778158]
+layout_mode = 2
+theme_type_variation = &"HSeparatorDark"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=59725540]
 layout_mode = 2
@@ -32,9 +47,11 @@ alignment = 1
 [node name="ResumeButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=855816073]
 unique_name_in_owner = true
 layout_mode = 2
+theme_type_variation = &"ButtonDark"
 text = "Resume"
 
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1882044275]
 unique_name_in_owner = true
 layout_mode = 2
+theme_type_variation = &"ButtonDark"
 text = "Quit"

@@ -6,11 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://dkqywxhopyj7x" path="res://icon.svg" id="2_lhyl1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4dcrc"]
+font_size = 18
 font_color = Color(1, 0.5249126, 0.88122815, 1)
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lhyl1"]
+font_size = 24
 font_color = Color(1, 0.8230824, 0.41900522, 1)
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)

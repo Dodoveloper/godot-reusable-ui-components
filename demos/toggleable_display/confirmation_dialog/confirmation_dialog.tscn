@@ -1,11 +1,27 @@
 [gd_scene format=3 uid="uid://cnigmfmjivd6p"]
 
+[ext_resource type="Theme" uid="uid://dex65sj4cjk33" path="res://demos/assets/themes/default_theme.tres" id="1_ng5lo"]
 [ext_resource type="Script" uid="uid://ydwqr8j1gggp" path="res://demos/toggleable_display/confirmation_dialog/confirmation_dialog.gd" id="1_sxv5s"]
+[ext_resource type="FontFile" uid="uid://c50ge3fc3sgn" path="res://demos/assets/fonts/kenney_pixel.ttf" id="3_fo1eb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n5u5r"]
+font = ExtResource("3_fo1eb")
+font_size = 28
+outline_size = 8
+outline_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ng5lo"]
+font = ExtResource("3_fo1eb")
+font_size = 18
+outline_size = 6
+outline_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
 
 [node name="ConfirmationDialog" type="PanelContainer" unique_id=84053973]
-offset_right = 315.0
-offset_bottom = 131.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
+custom_minimum_size = Vector2(300, 0)
+offset_right = 300.0
+offset_bottom = 101.0
+scale = Vector2(2, 2)
+theme = ExtResource("1_ng5lo")
 script = ExtResource("1_sxv5s")
 mount_mode = 1
 should_block_inputs = false
@@ -23,6 +39,7 @@ anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
 text = "Please Confirm..."
+label_settings = SubResource("LabelSettings_n5u5r")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -36,7 +53,8 @@ offset_left = -18.0
 offset_right = -1.0
 offset_bottom = 31.0
 grow_horizontal = 0
-text = "x"
+theme_type_variation = &"ButtonDark"
+text = "  X  "
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1771061161]
 layout_mode = 2
@@ -51,12 +69,14 @@ layout_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1169401529]
 layout_mode = 2
+theme_type_variation = &"HSeparatorDark"
 
 [node name="MessageLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1784552541]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
 text = "Are you sure you want to quit?"
+label_settings = SubResource("LabelSettings_ng5lo")
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=948523340]
@@ -68,10 +88,12 @@ alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
+theme_type_variation = &"ButtonDark"
 text = "Cancel"
 
 [node name="OkButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1173058450]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
+theme_type_variation = &"ButtonDark"
 text = "Ok"
