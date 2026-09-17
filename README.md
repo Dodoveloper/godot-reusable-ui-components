@@ -6,6 +6,8 @@
 
 *Reusable, composition-first UI pieces for Godot — built to be combined with each other and with vanilla nodes.*
 
+![Inventory demo](screenshots/inventory_1.png)
+
 ## Overview
 
 **Reusable UI Components** is a collection of generic, framework-agnostic UI components and base classes for Godot 4, built around composition rather than inheritance-heavy customization.
@@ -51,6 +53,8 @@ Intended to be subclassed to fit your own data and visuals; they provide the lif
 ## Demos
 
 Every component has a corresponding demo scene under `demos/`, each runnable individually (F6) to see the component in action:
+
+![Pause menu demo](screenshots/toggleable_display_2.png)
 
 | Demo | Showcases |
 |---|---|
